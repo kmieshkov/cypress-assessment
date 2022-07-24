@@ -1,0 +1,22 @@
+{
+  "name": "cypress-assessment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmieshkov/cypress-assessment.git"
+  },
+  "author": "kmieshkov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kmieshkov/cypress-assessment/issues"
+  },
+  "homepage": "https://github.com/kmieshkov/cypress-assessment#readme",
+  "devDependencies": {
+    "cypress": "^10.3.1"
+  }
+}
