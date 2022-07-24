@@ -45,31 +45,31 @@ class ReactShoppingCart {
 	}
 
 	getXSSize() {
-		return cy.get(xsSize, { timeout: 1000 }).parent(parentSize);
+		return cy.get(xsSize).parent(parentSize);
 	}
 
 	getSSize() {
-		return cy.get(sSize, { timeout: 1000 }).parent(parentSize);
+		return cy.get(sSize).parent(parentSize);
 	}
 
 	getMSize() {
-		return cy.get(mSize, { timeout: 1000 }).parent(parentSize);
+		return cy.get(mSize).parent(parentSize);
 	}
 
 	getMLSize() {
-		return cy.get(mlSize, { timeout: 1000 }).parent(parentSize);
+		return cy.get(mlSize).parent(parentSize);
 	}
 
 	getLSize() {
-		return cy.get(lSize, { timeout: 1000 }).parent(parentSize);
+		return cy.get(lSize).parent(parentSize);
 	}
 
 	getXLSize() {
-		return cy.get(xlSize, { timeout: 1000 }).parent(parentSize);
+		return cy.get(xlSize).parent(parentSize);
 	}
 
 	getXXLSize() {
-		return cy.get(xxlSize, { timeout: 1000 }).parent(parentSize);
+		return cy.get(xxlSize).parent(parentSize);
 	}
 
 	getCartBtn() {
@@ -93,7 +93,7 @@ class ReactShoppingCart {
 	}
 
 	getProductContainers() {
-		return cy.get(productContainers, { timeout: 2000 });
+		return cy.get(productContainers);
 	}
 
 	getAddToCart(index) {
