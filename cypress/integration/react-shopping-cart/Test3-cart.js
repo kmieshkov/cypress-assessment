@@ -1,14 +1,14 @@
 /// <reference types="Cypress" />
 /// <reference types="cypress-real-events/support" />
 
-import ReactShoppingCartPage from '../support/POM/ReactShoppingCart'
+import ReactShoppingCartPage from '../../support/POM/ReactShoppingCart'
 
 describe('Reat Shopping Cart Test Suite', function () {
 	beforeEach(() => {
-		cy.visit("https://react-shopping-cart-67954.firebaseapp.com/");
 		cy.fixture('example').then(function (data) {
 			this.data = data;
 		});
+		cy.visit(Cypress.env('shoppingCart'));
 	})
 
 	it('Test#1 - User can add and remove products from the cart', function () {
@@ -46,7 +46,7 @@ describe('Reat Shopping Cart Test Suite', function () {
 			})
 		})
 
-		// add prices of products in the cart
+		// sum prices of products in the cart
 		var sum = 0;
 		rsc.getCartItems().each(($el, index, $list) => {
 			rsc.getCartProductPrice(index).then(element => {
@@ -77,9 +77,13 @@ describe('Reat Shopping Cart Test Suite', function () {
 
 		const qty = this.data.products.length;
 
+		// qty in the cart
 		rsc.getCartItems().should('have.length', qty);
+		// qty on the cart label - open cart 
 		rsc.getCartQtyLabel().should('have.text', qty);
+
 		rsc.getCloseCartBtn().click();
+		// qty on the cart label - close cart
 		rsc.getProductsInCart().should('have.text', qty);
 	});
 
@@ -113,11 +117,24 @@ describe('Reat Shopping Cart Test Suite', function () {
 				expect(qty).to.be.equal(1);
 			})
 		})
+	});
+
+	it("Test#5 - Item qty can't be less than 1", function () {
+		// React Shopping Cart page objects
+		const rsc = new ReactShoppingCartPage();
+
+		// add items to the cart
+		this.data.products.forEach(product => {
+			rsc.getProductNames().each(($el, index, $list) => {
+				if ($el.text() === product) {
+					rsc.getAddToCart(index).click({ force: true });
+				}
+			})
+		})
 
 		// item qty can't be less than 1
 		rsc.getCartItems().each(($el, index, $list) => {
 			rsc.getMinus(index).should('be.disabled');
 		})
-
 	});
 })

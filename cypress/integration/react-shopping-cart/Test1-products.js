@@ -1,11 +1,11 @@
 /// <reference types="Cypress" />
 /// <reference types="cypress-real-events/support" />
 
-import ReactShoppingCartPage from '../support/POM/ReactShoppingCart'
+import ReactShoppingCartPage from '../../support/POM/ReactShoppingCart'
 
 describe('Products Test Suite', function () {
 	before(() => {
-		cy.visit("https://react-shopping-cart-67954.firebaseapp.com/");
+		cy.visit(Cypress.env('shoppingCart'));
 	})
 
 	beforeEach(() => {
