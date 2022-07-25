@@ -13,6 +13,13 @@ module.exports = defineConfig({
       demoqa: 'https://demoqa.com/frames'
     },
     reporter: 'mochawesome',
+    reporterOptions: {
+      "charts": true,
+      "overwrite": false,
+      "html": false,
+      "json": true,
+      "reportDir": "cypress/reports/mochawesome-report"
+    },
     // how many times it will run failed test before throw a failure
     retries: {
       runMode: 2
