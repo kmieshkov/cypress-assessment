@@ -27,7 +27,7 @@ Project covers functionality of 2 web-app:
 
 **mocha**, **mochawesome** and **mochawesome-merge** for reporting needs
 
-# Installation
+# Installation and Execution
 
 To install and configure project:
 ```
@@ -36,7 +36,7 @@ cd cypress-assessment
 npm install
 ```
 
-<h3>This project has custom scripts</h3>
+<h3>Execution can be done thru custom scripts</h3>
 
 ```npm run report```  to execute test run in headedless mode with reports created in the reports/output.html file (<a href="https://github.com/kmieshkov/cypress-assessment/blob/main/cypress/reports/output.html">example</a>). **This command includes mochawesome repor tool, merge reports from all the test suites into one file and clean those temorary files** 
 
@@ -44,6 +44,13 @@ npm install
 
 ```npm run headed``` to execute test run in headed mode
 
+<h4>Example:<h4>
+
+<h3>Execution could be done thru Cypress Gui</h3>
+
+```./node_modules/.bin/cypress open``` to open *Cypress GUI* and perform text execution from there
+
+<h4>Example:<h4>
 
 # Test cases descriprion
 
