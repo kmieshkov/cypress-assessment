@@ -4,7 +4,7 @@
 
 import iFrameDemoQA from '../../support/POM/iFrameDemoQA'
 
-describe('GlobalSQA iFrame Test Suite', function () {
+describe('GlobalSQA - iFrame Test Suite', function () {
 	beforeEach(() => {
 		cy.fixture('demoqa').then(function (data) {
 			this.data = data;

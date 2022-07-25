@@ -3,7 +3,7 @@
 
 import ReactShoppingCartPage from '../../support/POM/ReactShoppingCart'
 
-describe('Products Test Suite', function () {
+describe('React Shopping Cart - Products Test Suite', function () {
 	before(() => {
 		cy.visit(Cypress.env('shoppingCart'));
 	})

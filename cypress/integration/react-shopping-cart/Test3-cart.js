@@ -3,7 +3,7 @@
 
 import ReactShoppingCartPage from '../../support/POM/ReactShoppingCart'
 
-describe('Reat Shopping Cart Test Suite', function () {
+describe('Reat Shopping Cart - Cart Test Suite', function () {
 	beforeEach(() => {
 		cy.fixture('example').then(function (data) {
 			this.data = data;
