@@ -34,14 +34,13 @@ cd cypress-assessment
 npm install
 ```
 
-This project has custom scripts
-```npm run test``` to execute test run in headless mode (by default)
-
-```npm run headed``` to execute test run in headed
-
-```npm run headed``` to execute test run in headed
+<h3>This project has custom scripts</h3>
 
 ```npm run report```  to execute test run in headedless mode with reports created in the reports/output.html file (<a href="https://github.com/kmieshkov/cypress-assessment/blob/main/cypress/reports/output.html">example</a>). **This command includes mochawesome repor tool, merge reports from all the test suites into one file and clean those temorary files** 
+
+```npm run test``` to execute test run in headless mode (by default)
+
+```npm run headed``` to execute test run in headed mode
 
 
 # Test cases descriprion
