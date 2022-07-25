@@ -38,19 +38,21 @@ npm install
 
 <h3>Execution can be done thru custom scripts</h3>
 
-```npm run report```  to execute test run in headedless mode with reports created in the reports/output.html file (<a href="https://github.com/kmieshkov/cypress-assessment/blob/main/cypress/reports/output.html">example</a>). **This command includes mochawesome repor tool, merge reports from all the test suites into one file and clean those temorary files** 
+```npm run report```  to execute test run in headedless mode with reports created in the reports/output.html file (<a href="https://github.com/kmieshkov/cypress-assessment/blob/main/cypress/reports/output.html">raw</a> and <a href="https://kmieshkov.github.io/">web-page</a>). **This command includes mochawesome repor tool, merge reports from all the test suites into one file and clean those temorary files** 
 
 ```npm run test``` to execute test run in headless mode (by default)
 
 ```npm run headed``` to execute test run in headed mode
 
 <h4>Example:<h4>
+<img src="https://github.com/kmieshkov/cypress-assessment/blob/main/cypress/examples/npm-run-report.gif" width="500px"/>
 
 <h3>Execution could be done thru Cypress Gui</h3>
 
 ```./node_modules/.bin/cypress open``` to open *Cypress GUI* and perform text execution from there
 
 <h4>Example:<h4>
+<img src="https://github.com/kmieshkov/cypress-assessment/blob/main/cypress/examples/cypress-gui.gif" width="500px"/>
 
 # Test cases descriprion
 
