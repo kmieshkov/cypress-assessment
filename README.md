@@ -6,7 +6,7 @@ Project covers functionality of 2 web-app:
 1. <a href="https://react-shopping-cart-67954.firebaseapp.com/">React Shopping Cart</a>
 2. <a href="https://demoqa.com/frames">DemoQA</a>
 
-Functionality covered:
+### Functionality covered:
 * Page Objects model framework for tests execution
 * Custom commands in the support folder and additional dependencies to enhance the functionality of the testing framework
 * Merging reports for every test suite for one report file **output.html**
@@ -46,7 +46,7 @@ This project has custom scripts
 
 # Test cases descriprion
 
-React Shopping Cart include three main Test Suites that focused on:
+**React Shopping Cart include three main Test Suites that focused on:**
 1. Products Test Suite
    * Product should change image on mouse hover
    * Products with free shipping should have "Free shipping" labels, and otherwise - products with no free shipping option should not have "Free shipping" labels
@@ -61,6 +61,7 @@ React Shopping Cart include three main Test Suites that focused on:
    * Users are able to change qty of products in the cart
    * Product qty in the cart cannot be negative or 0
 
-DemoQA include one Test Suites with 2 test cases that focused on **iframes**:
+
+**DemoQA include one Test Suites with 2 test cases that focused on *iframes***:
 1. Verify background color and heading in the frame
 2. Verify size and css property of the iframe
