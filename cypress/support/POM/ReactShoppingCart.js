@@ -9,13 +9,6 @@ const lSize = "input[type=checkbox][value='L']";
 const xlSize = "input[type=checkbox][value='XL']";
 const xxlSize = "input[type=checkbox][value='XXL']";
 const parentSize = "label";
-const xs = 1;
-const s = 2;
-const m = 1;
-const ml = 2;
-const l = 10;
-const xl = 10;
-const xxl = 4;
 const cartBtn = "//div[@title='Products in cart quantity']/parent::div/parent::button";
 const productsInCart = "//div[@title='Products in cart quantity']";
 const github = "a[href*=github]";
@@ -23,52 +16,58 @@ const checkoutBtn = "//button[text()='Checkout']";
 const subtotal = "//p[text()='SUBTOTAL']/following-sibling::div/p[1]";
 const splitSubtotal = "//p[text()='SUBTOTAL']/following-sibling::div/p[2]";
 const productContainers = ".sc-124al1g-2";
+const productNames = ".sc-124al1g-2 > p";
 const addToCart = "Add to cart";
-const shippingLabel = "//div[text()='Free shipping']";
-const plus = "//button[text()='-']";
-const minus = "//button[text()='+']";
+const shippingLabel = "Free shipping";
+const plus = "//button[text()='+']";
+const minus = "//button[text()='-']";
 const cartProductPrice = ".sc-11uohgb-4 p";
 const cartItems = ".sc-11uohgb-0";
+const removeFromCart = "button[title='remove product from cart']";
+const productPrices = ".sc-124al1g-6";
+const splitProductPrices = ".sc-124al1g-7";
+const cartQtyLabel = ".sc-1h98xa9-3";
+const closeCartBtn = "//span[text()='X']";
 
 class ReactShoppingCart {
     constructor(){
-		this.xs = xs;
-		this.s = s;
-		this.m = m;
-		this.ml = ml;
-		this.l = l;
-		this.xl = xl;
-		this.xxl = xxl;
+		this.xs = 1;
+		this.s = 2;
+		this.m = 1;
+		this.ml = 2;
+		this.l = 10;
+		this.xl = 10;
+		this.xxl = 4;
     }
 	getGitHub() {
 		return cy.get(github);
 	}
 
-	getXSSize() {
+	getSizeXS() {
 		return cy.get(xsSize).parent(parentSize);
 	}
 
-	getSSize() {
+	getSizeS() {
 		return cy.get(sSize).parent(parentSize);
 	}
 
-	getMSize() {
+	getSizeM() {
 		return cy.get(mSize).parent(parentSize);
 	}
 
-	getMLSize() {
+	getSizeML() {
 		return cy.get(mlSize).parent(parentSize);
 	}
 
-	getLSize() {
+	getSizeL() {
 		return cy.get(lSize).parent(parentSize);
 	}
 
-	getXLSize() {
+	getSizeXL() {
 		return cy.get(xlSize).parent(parentSize);
 	}
 
-	getXXLSize() {
+	getSizeXXL() {
 		return cy.get(xxlSize).parent(parentSize);
 	}
 
@@ -96,28 +95,52 @@ class ReactShoppingCart {
 		return cy.get(productContainers);
 	}
 
+	getProductNames() {
+		return cy.get(productNames);
+	}
+
 	getAddToCart(index) {
-		return this.getProductContainers().eq(index).find(addToCart).eq(index);
+		return this.getProductContainers().eq(index).contains(addToCart);
 	}
 
 	getShippingLabel(index) {
-		return this.getProductContainers().eq(index).find(shippingLabel).eq(index);
+		return this.getProductContainers().eq(index).contains(shippingLabel);
 	}
 
 	getCartItems() {
 		return cy.get(cartItems);
 	}
 
-	getMinus() {
-		return cy.xpath(minus);
+	getMinus(index) {
+		return cy.xpath(minus).eq(index);
 	}
 
-	getPlus() {
-		return cy.xpath(plus);
+	getPlus(index) {
+		return cy.xpath(plus).eq(index);
 	}
 
-	getCartProductPrice() {
-		return cy.get(cartProductPrice);
+	getCartProductPrice(index) {
+		return cy.get(cartProductPrice).eq(index);
+	}
+
+	getRemoveFromCart() {
+		return cy.get(removeFromCart);
+	}
+
+	getProductPrice(index) {
+		return cy.get(productPrices).eq(index);
+	}
+
+	getSplitProductPrice(index) {
+		return this.getProductContainers().eq(index).find(splitProductPrices);
+	}
+
+	getCartQtyLabel() {
+		return cy.get(cartQtyLabel);
+	}
+
+	getCloseCartBtn() {
+		return cy.xpath(closeCartBtn);
 	}
 }
 
