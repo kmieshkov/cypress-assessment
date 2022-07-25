@@ -6,6 +6,8 @@ Project covers functionality of 2 web-app:
 1. <a href="https://react-shopping-cart-67954.firebaseapp.com/">React Shopping Cart</a>
 2. <a href="https://demoqa.com/frames">DemoQA</a>
 
+### Report stored in ```./cypress/reports/output.html```, live example located <a href="https://kmieshkov.github.io/">here</a>
+
 ### Functionality covered:
 * Page Objects model framework for tests execution
 * Custom commands in the support folder and additional dependencies to enhance the functionality of the testing framework
@@ -54,11 +56,11 @@ npm install
    * All products could be filtered by size (XS, S, M, ML, L, XL, XXL)
    * Qty of filtered products should match displayed qty of products
 3. Cart Test Suite
-   * Users are able to arr and remove products from the cart
-   * Sum of all products in the cart should correspond subtotal amount in the cart
+   * Users are able to add and remove products from the cart
+   * Sum of all product prices in the cart should correspond subtotal amount in the cart
    * Qty of added products in the cart should match label cart qty (for both, open and closed cart), and qty products in the cart
    * Users are able to change qty of products in the cart
-   * Product qty in the cart cannot be negative or 0
+   * If qty in the cart is equal 1, the minus button is disabled (user cannot set qty less than 1)
 
 
 **DemoQA include one Test Suites with 2 test cases that focused on *iframes***:
