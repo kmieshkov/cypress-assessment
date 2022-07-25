@@ -28,6 +28,7 @@ const productPrices = ".sc-124al1g-6";
 const splitProductPrices = ".sc-124al1g-7";
 const cartQtyLabel = ".sc-1h98xa9-3";
 const closeCartBtn = "//span[text()='X']";
+const emptyCart = ".sc-7th5t8-1";
 
 class ReactShoppingCart {
     constructor(){
@@ -141,6 +142,10 @@ class ReactShoppingCart {
 
 	getCloseCartBtn() {
 		return cy.xpath(closeCartBtn);
+	}
+
+	getEmptyCart() {
+		return cy.get(emptyCart);
 	}
 }
 
