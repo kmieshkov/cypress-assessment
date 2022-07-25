@@ -16,6 +16,9 @@ Project covers functionality of 2 web-app:
 * Configuration of **cypress.config.js** file to establish env variables, and enhance reporting capability
 * Custom scripts to delete temp files and custom functions to use in the test suites (refactor **hex** color to **rgb** format, **regex** to parse prices)
 
+### Project structure:
+<img src="https://github.com/kmieshkov/cypress-assessment/blob/main/cypress/examples/project-structure.jpg" width="400px"/>
+
 # Dependencies used
 **cypress** testing framework
 
