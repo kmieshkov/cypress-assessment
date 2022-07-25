@@ -29,7 +29,9 @@ describe('Reat Shopping Cart - Cart Test Suite', function () {
 		rsc.getCartItems().each(($el, index, $list) => {
 			rsc.getRemoveFromCart().eq(0).click();
 		})
-		rsc.getCartItems().should('have.length', 0);
+		rsc.getEmptyCart().then(element => {
+			expect(element.text()).to.include('Add some products in the cart');
+		})
 	});
 
 
