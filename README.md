@@ -6,6 +6,8 @@ Project covers functionality of 2 web-app:
 1. <a href="https://react-shopping-cart-67954.firebaseapp.com/">React Shopping Cart</a>
 2. <a href="https://demoqa.com/frames">DemoQA</a>
 
+### Report stored in ```./cypress/reports/output.html```, live example located <a href="https://kmieshkov.github.io/">here</a>
+
 ### Functionality covered:
 * Page Objects model framework for tests execution
 * Custom commands in the support folder and additional dependencies to enhance the functionality of the testing framework
