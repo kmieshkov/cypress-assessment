@@ -1,0 +1,11 @@
+{
+  "frame1": {
+    "heading": "This is a sample page",
+    "background-color":"#a9a9a9"
+  },
+  "frame2": {
+    "width": "100px",
+    "height": "100px",
+    "overflow": "visible"
+  }
+}
